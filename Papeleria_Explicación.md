@@ -1,5 +1,4 @@
-|# Proyecto Papeleria 
-
+# 📝 Proyecto Papeleria 📝
 
 (Sirve para colocar la descrición de tu proyecto) 
 
