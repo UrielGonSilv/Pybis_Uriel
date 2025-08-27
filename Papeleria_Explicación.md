@@ -11,3 +11,6 @@
 # Power BI 
 
 Reportamos el historico de las ventas usando tal grafico para ver tal cosa. . .
+....
+Library_Papeleria.py: Este archivo tiene el codigo de la clase tools . . .  tiene las funciones . . .  y es donde tenemos el flujo de datos. 
+
