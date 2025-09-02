@@ -36,3 +36,32 @@ Este proyecto simula un sistema de generación de ventas de una papelería con v
 - Pandas: Generar bases de datos de prueba para análisis.
 - SQLite3: Practicar consultas SQL con información simulada.
 - Random: Probar técnicas de análisis de datos con Pandas.
+
+ ### 📂 Las listas que definimos para crear la información de las ventas en la papelería: 
+
+Para la generación de ventas ficticias se definieron tres listas principales:
+
+- **Sucursales (`papelerias`)**  
+  Contiene los nombres de las delegaciones en donde se encuentran las sucursales ficticias de papelerias simuladas, donde se realizan las ventas.  
+  *papelerias = [
+    'Xochimilco', 'Cuemanco', 'Coapa', 'Milpa Alta',
+    'CU', 'Zócalo', 'Narvarte', 'Santa Fé', 'Polanco',
+    'Centro'
+  ]*
+
+- **Productos (`lineas`)**  
+  Esta lista contiene la información de los productos que se venden en cada una de las papelerias.  
+  *lineas = [
+    'Cuadernos', 'Libretas', 'Lápices', 'Plumones', 'Borradores', 'Sacapuntas',
+    'Laptops', 'Tablets', 'Mochilas', 'Bolsas', 'Cajas', 'Pegamento', 'Tijeras',
+    'Monitores', 'Teclados', 'Mouse', 'Audífonos', 'Cables', 'Cargadores', 'Baterías',
+    'Pc', 'Uniformes', 'Pinturas', 'Pinceles', 'Papel', 'Cartulinas' ]*
+
+- **Abecedario (`abcdario`)**  
+  Incluye todas las letras de la A a la Z en mayúsculas.  
+  Su función es **generar claves únicas de producto** combinando letras y números, imitando un código de inventario o SKU.  
+  *abcdario = [
+    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
+    'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
+    'U', 'V', 'W', 'X', 'Y', 'Z'
+]*
