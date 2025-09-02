@@ -24,8 +24,8 @@ Este proyecto simula un sistema de generación de ventas de una papelería con v
 - **Control de inserción de datos**:
   - `replace` → Crea o reinicia la tabla, la cual en este proyecto la llamamos `Ventas_2025`.
   - `append` → Esta función agrega información en una tabla ya existente, la cual utilizamos para no borrar los datos ya agregados.
-- **Mas tarde integramos SQL para poder hacer consultas de la información generada de las ventas de la papeleria en sus diferentes sucursales.
-- **Con la cual creamos un documento formato csv para poderlo manejar en Power Bi y de esta forma dar un informe de ventas. 
+- Mas tarde integramos SQL para poder hacer consultas de la información generada de las ventas de la papeleria en sus diferentes sucursales.
+- Con la cual creamos un documento formato csv para poderlo manejar en Power Bi y de esta forma dar un informe de ventas. 
 
 ### 🔹 Paqueterias utilizadas:
 - Pandas
