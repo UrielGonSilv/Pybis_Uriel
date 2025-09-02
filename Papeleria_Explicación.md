@@ -43,51 +43,55 @@ Para la generación de ventas ficticias se definieron tres listas principales:
 
 - **Sucursales (`papelerias`)**  
   Contiene los nombres de las delegaciones en donde se encuentran las sucursales ficticias de papelerias simuladas, donde se realizan las ventas.  
-  *papelerias = [
+  ```python
+   papelerias = [
     'Xochimilco', 'Cuemanco', 'Coapa', 'Milpa Alta',
     'CU', 'Zócalo', 'Narvarte', 'Santa Fé', 'Polanco',
     'Centro'
-  ]*
+  ]* ``` 
 
 - **Productos (`lineas`)**  
   Esta lista contiene la información de los productos que se venden en cada una de las papelerias.  
-  *lineas = [
+    ```python
+    lineas = [
     'Cuadernos', 'Libretas', 'Lápices', 'Plumones', 'Borradores', 'Sacapuntas',
     'Laptops', 'Tablets', 'Mochilas', 'Bolsas', 'Cajas', 'Pegamento', 'Tijeras',
     'Monitores', 'Teclados', 'Mouse', 'Audífonos', 'Cables', 'Cargadores', 'Baterías',
-    'Pc', 'Uniformes', 'Pinturas', 'Pinceles', 'Papel', 'Cartulinas' ]*
+    'Pc', 'Uniformes', 'Pinturas', 'Pinceles', 'Papel', 'Cartulinas' ]* ```
 
 - **Abecedario (`abcdario`)**  
   Incluye todas las letras de la A a la Z en mayúsculas.  
   Su función es **generar claves únicas de producto** combinando letras y números, imitando un código de inventario o SKU.  
-  *abcdario = [
+  ```python
+  abcdario = [
     'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
     'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
-    'U', 'V', 'W', 'X', 'Y', 'Z'
-]*
+    'U', 'V', 'W', 'X', 'Y', 'Z' ]* ```
+  
 ### 📦 Inicialización de listas vacías
 
 Antes de generar los registros de ventas, se crean listas vacías que funcionarán como contenedores.  
 Cada una almacenará un tipo de información específica que se completará dentro del bucle `for`.
 
 ```python
-- Guardará la fecha en la que ocurre cada venta
+# Guardará la fecha en la que ocurre cada venta
 fechas = []
 
-- Guardará el nombre del producto vendido
+# Guardará el nombre del producto vendido
 productos = []
 
-- Guardará la clave única de cada producto (ejemplo: "ABC-123")
+# Guardará la clave única de cada producto (ejemplo: "ABC-123")
 claves = []
 
-- Guardará la cantidad de productos vendidos
+# Guardará la cantidad de productos vendidos
 cantidades = []
 
-- Guardará el precio unitario del producto
+# Guardará el precio unitario del producto
 precios = []
 
-- Guardará el total de cada venta (cantidad * precio)
+# Guardará el total de cada venta (cantidad * precio)
 totales = []
 
-- Guardará el nombre de la sucursal donde ocurrió la venta
+# Guardará el nombre de la sucursal donde ocurrió la venta
 sucursales = []
+```
