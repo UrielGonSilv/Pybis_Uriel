@@ -135,3 +135,17 @@ dict_pre_ventas = {
         "Total": totales,
         "Sucursal": sucursales
 ```
+La estructura resutante de este codigo es mas o menos la siguiente: 
+
+```python
+{
+    "Fecha": [fecha1, fecha2, fecha3, ..., fechaN],
+    "Producto": [producto1, producto2, producto3, ..., productoN],
+    "Clave": [clave1, clave2, clave3, ..., claveN],
+    "Cantidad": [cantidad1, cantidad2, cantidad3, ..., cantidadN],
+    "Precio": [precio1, precio2, precio3, ..., precioN],
+    "Total": [total1, total2, total3, ..., totalN],
+    "Sucursal": [sucursal1, sucursal2, sucursal3, ..., sucursalN]
+}
+```
+En el cual se estria agregando la información de cada variable con el "bucle for" que se genero.
