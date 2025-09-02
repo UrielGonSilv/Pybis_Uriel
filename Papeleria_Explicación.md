@@ -73,7 +73,7 @@ Para la generación de ventas ficticias se definieron tres listas principales:
   
 ### 📦 Inicialización de listas vacías
 
-Antes de generar los registros de ventas, se crean listas vacías que funcionarán como contenedores.  
+Antes de generar las ventas de los productos, se crean listas vacías que funcionarán como contenedores.  
 Cada una almacenará un tipo de información específica que se completará dentro del bucle `for`.
 
 ```python
@@ -83,7 +83,7 @@ fechas = []
 # Guardará el nombre del producto vendido
 productos = []
 
-# Guardará la clave única de cada producto (ejemplo: "ABC-123")
+# Guardará la clave única de cada producto (Por ejemplo: "ABC-123")
 claves = []
 
 # Guardará la cantidad de productos vendidos
@@ -98,3 +98,5 @@ totales = []
 # Guardará el nombre de la sucursal donde ocurrió la venta
 sucursales = []
 ```
+## 🎓 En esta parte del codigo se creo el primer "for" para poder crear las ventas aleatorias de las sucursales, 
+## definiendo cada variable y su contenido. 
