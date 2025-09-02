@@ -98,5 +98,40 @@ totales = []
 # Guardará el nombre de la sucursal donde ocurrió la venta
 sucursales = []
 ```
-## 🎓 En esta parte del codigo se creo el primer "for" para poder crear las ventas aleatorias de las sucursales, 
-## definiendo cada variable y su contenido. 
+## 🎓 Creación de las variables con el primer "for" del codigo. 
+
+En esta parte del codigo se creo el primer "for" para poder crear las ventas aleatorias de las sucursales, definiendo cada variable y su contenido. 
+
+```python
+for i in range(1, r.randint(1001, 20001)):
+    # Zona de definición de variables
+    producto = r.choice(lineas)
+    clave = r.choice(abcdario) + r.choice(abcdario) + r.choice(abcdario) + '-' + str(r.randint(1, 9)) + str(r.randint(1, 9)) + str(r.randint(1, 9))
+    cantidad = r.randint(1, 50)
+    precio = round(r.randint(1, 10000) * r.random(), 2)
+    total = round(precio * cantidad, 2)
+    sucursal = r.choice(papelerias)
+```
+Despues agregamos la información generada en cada una de las listas con la función ".append", como se muestra en el siguiente codigo: 
+
+```python
+ fechas.append(fecha)
+        productos.append(producto)
+        claves.append(clave)
+        cantidades.append(cantidad)
+        precios.append(precio)
+        totales.append(total)
+        sucursales.append(sucursal)
+```
+Se crea un diccionario donde cada clave (productos, claves, cantidades, precios, totales, sucursales), la cual representa una categoría de datos y su valor es la lista completa de estos: 
+```python
+dict_pre_ventas = {
+        # clave: valores asociados
+        "Fecha": fechas,
+        "Producto": productos,
+        "Clave": claves,
+        "Cantidad": cantidades,
+        "Precio": precios,
+        "Total": totales,
+        "Sucursal": sucursales
+```
