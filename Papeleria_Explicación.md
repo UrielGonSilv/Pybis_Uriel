@@ -65,3 +65,29 @@ Para la generación de ventas ficticias se definieron tres listas principales:
     'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
     'U', 'V', 'W', 'X', 'Y', 'Z'
 ]*
+### 📦 Inicialización de listas vacías
+
+Antes de generar los registros de ventas, se crean listas vacías que funcionarán como contenedores.  
+Cada una almacenará un tipo de información específica que se completará dentro del bucle `for`.
+
+```python
+- Guardará la fecha en la que ocurre cada venta
+fechas = []
+
+- Guardará el nombre del producto vendido
+productos = []
+
+- Guardará la clave única de cada producto (ejemplo: "ABC-123")
+claves = []
+
+- Guardará la cantidad de productos vendidos
+cantidades = []
+
+- Guardará el precio unitario del producto
+precios = []
+
+- Guardará el total de cada venta (cantidad * precio)
+totales = []
+
+- Guardará el nombre de la sucursal donde ocurrió la venta
+sucursales = []
