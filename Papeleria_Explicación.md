@@ -48,7 +48,7 @@ Para la generación de ventas ficticias se definieron tres listas principales:
     'Xochimilco', 'Cuemanco', 'Coapa', 'Milpa Alta',
     'CU', 'Zócalo', 'Narvarte', 'Santa Fé', 'Polanco',
     'Centro'
-  ]*
+  ]
   ``` 
 
 - **Productos (`lineas`)**  
@@ -58,7 +58,7 @@ Para la generación de ventas ficticias se definieron tres listas principales:
     'Cuadernos', 'Libretas', 'Lápices', 'Plumones', 'Borradores', 'Sacapuntas',
     'Laptops', 'Tablets', 'Mochilas', 'Bolsas', 'Cajas', 'Pegamento', 'Tijeras',
     'Monitores', 'Teclados', 'Mouse', 'Audífonos', 'Cables', 'Cargadores', 'Baterías',
-    'Pc', 'Uniformes', 'Pinturas', 'Pinceles', 'Papel', 'Cartulinas' ]*
+    'Pc', 'Uniformes', 'Pinturas', 'Pinceles', 'Papel', 'Cartulinas' ] 
     ```
 
 - **Abecedario (`abcdario`)**  
@@ -68,7 +68,7 @@ Para la generación de ventas ficticias se definieron tres listas principales:
   abcdario = [
     'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
     'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
-    'U', 'V', 'W', 'X', 'Y', 'Z' ]*
+    'U', 'V', 'W', 'X', 'Y', 'Z' ]
   ```
   
 ### 📦 Inicialización de listas vacías
