@@ -251,9 +251,13 @@ def consulta(sentenciaSQL):
 
     return df_consulta
 ```
-
 Permite ejecutar cualquier sentencia SQL sobre la base Ventas.db.
 
 Devuelve el resultado en un DataFrame de Pandas, listo para análisis o sus consultas. 
 
+ ## 🎓🎓🎓Resultado 🎓🎓🎓
+ 
+- Creamos nuestra porpia libreria llamada "lpym", para automatizar los procesos de las consultas y poder crear una base de datos con daros reales de las ventas que generamos, este se guardo en formato csv, ya que en este formato se pueden guardar millones de datos sin tanto problema, que ocupamos como insumo para poder utilizar Power BI y asi poder mostrar un informe de ventas diaris, mensuales o por año.
+- lpym.py: Este archivo tiene el codigo de la "clase tools" y contiene las funciones para poder realizar la simulación de las ventas de las diferentes papelerias, donde obtenemos un flujo de datos para plasmarlos en una base de datos y asi poder manipularla y poder dar informes sobre las ventas o información que contiene la base de datos creada con este archivo.
+- Reporte de ventas papeleria.png: Contiene 
 
