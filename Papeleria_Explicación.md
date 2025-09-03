@@ -239,7 +239,7 @@ Permite ejecutar cualquier sentencia SQL sobre la base Ventas.db.
 
 Devuelve el resultado en un DataFrame de Pandas, listo para análisis o sus consultas. 
 
- ## 🎓🎓🎓Resultado 🎓🎓🎓
+<h3 align="center">## 🎓🎓🎓Resultado 🎓🎓🎓</h3>
  
 ### 📦 Creación de la librería **lpym**
 
