@@ -1,19 +1,3 @@
-# 📝 Proyecto Papeleria 📝
-
-(Sirve para colocar la descrición de tu proyecto) 
-
-* 1.- Objetivo: ¿Que buscas programar/simular? Simular un flujo de datos de una papeleria ficticia.
-* 2.- Descripción: (a) Simulando la información de manera aleatoria con Random . . . (b) Montamos una base de datos . . . 
-    (c) Automatizamos el flujo de datos implementando . . . 
-* 3.- Resultado: Creamos nuestra porpia libreria para automatizar . . .  y obtuvimos al final un excel que ocupamos como como insumo para Powe BI
-  
-# Python 
-# Power BI 
-
-Reportamos el historico de las ventas usando tal grafico para ver tal cosa. . .
-....
-Library_Papeleria.py: Este archivo tiene el codigo de la clase tools . . .  tiene las funciones . . .  y es donde tenemos el flujo de datos. 
-
 ##  📝 Proyecto Papelería 📝 
 
 Este proyecto simula un sistema de generación de ventas de una papelería con varias sucursales. 
@@ -257,10 +241,43 @@ Devuelve el resultado en un DataFrame de Pandas, listo para análisis o sus cons
 
  ## 🎓🎓🎓Resultado 🎓🎓🎓
  
-- Creamos nuestra porpia libreria llamada "lpym", para automatizar los procesos de las consultas y poder crear una base de datos con daros reales de las ventas que generamos, este se guardo en formato csv, ya que en este formato se pueden guardar millones de datos sin tanto problema, que ocupamos como insumo para poder utilizar Power BI y asi poder mostrar un informe de ventas diaris, mensuales o por año.
-- lpym.py: Este archivo tiene el codigo de la "clase tools" y contiene las funciones para poder realizar la simulación de las ventas de las diferentes papelerias, donde obtenemos un flujo de datos para plasmarlos en una base de datos y asi poder manipularla y poder dar informes sobre las ventas o información que contiene la base de datos creada con este archivo.
+### 📦 Creación de la librería **lpym**
 
-- Reporte de ventas papeleria.png: Contiene el informe "Histórico de ventas Julio" en el cual se muestra una grafica la cual tiene fluctuaciones de las diferentes sucursales de las papelerias. Tambien contiene la "Suma de Total por Sucursal", donde se puede observar que la sucrusal que mas ventas tuvo en el mes de Julio fue la sucrusal "C.U" con 1.61 mil millones de unidades monetarias, ademas de contener dos filtros, el primer filtro nos muestra las ventas en las diferentes fechas, con este filtro es mucho mas facil de buscar las ventas especificas de un dia o de un rango de dias con tan solo mover una barra. El segundo filtro es sobre las sucursales, este nos facilita la busqueda de ventas en las diferentes sucursales.
+Creamos nuestra propia librería llamada **`lpym`**, con el objetivo de **automatizar los procesos de consultas** y facilitar la creación de una base de datos con los datos de ventas simuladas generados en el código. Los resultados se guardaron en **formato CSV**, ya que este tipo de archivo permite almacenar grandes cantidades de información de manera estructurada y compatible con diversas herramientas.  
 
-- Reporte de ventas papeleria 2.png: Esta imagen contiene la gráfica "Suma de Total por Producto", en la cual se presenta en forma de barras, donde en el eje x, nos muestra los productos que vende la papeleria y en el eje y, nos muestra la canitdad vendida de cada producto. Ademas de mostrar los mismo filtros por fecha y por sucursal. 
+Este archivo CSV fue utilizado como insumo para **Power BI**, lo que nos permitió construir reportes interactivos de las ventas:  
+- 📅 **Diarias**  
+- 📈 **Mensuales**  
+- 📊 **Anuales**  
+
+De esta manera, logramos conectar la simulación de datos con una herramienta de análisis real, mostrando visualmente el comportamiento de las ventas.
+
+## 📂 Archivos del proyecto
+
+- **lpym.py**
+  
+Contiene el código de la clase **`tools`**, la cual incluye las funciones necesarias para simular las ventas de las diferentes papelerías.  
+  A partir de estas simulaciones se obtiene un flujo de datos que se almacena en una base de datos, lo que permite:  
+  - Manipular la información.  
+  - Generar informes sobre las ventas.  
+  - Consultar y analizar los datos almacenados.  
+
+---
+
+- **Reporte de ventas papeleria.png**  
+  Este archivo muestra el informe **"Histórico de Ventas - Julio"**, que incluye:  
+  - 📈 Una gráfica con las fluctuaciones de ventas de las diferentes sucursales.  
+  - 📊 La visualización **"Suma de Total por Sucursal"**, donde se observa que la sucursal con mayores ventas en julio fue **C.U.**, con **1.61 mil millones** de unidades monetarias.  
+  - 🔎 Dos filtros interactivos:  
+    - **Filtro por fecha** → permite consultar ventas de un día específico o de un rango de días.  
+    - **Filtro por sucursal** → facilita la búsqueda de ventas de una sucursal en particular.  
+
+---
+
+- **Reporte de ventas papeleria 2.png**  
+  Este archivo muestra la gráfica **"Suma de Total por Producto"**, presentada en forma de barras:  
+  - El eje **X** representa los productos vendidos en la papelería.  
+  - El eje **Y** indica la cantidad total vendida de cada producto.  
+  - Incluye los mismos filtros por **fecha** y por **sucursal**, lo que facilita el análisis detallado de la información.  
+
 
