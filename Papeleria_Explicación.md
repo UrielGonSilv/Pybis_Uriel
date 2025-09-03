@@ -241,7 +241,7 @@ Devuelve el resultado en un DataFrame de Pandas, listo para análisis o sus cons
 
 <h3 align="center">🎓🎓🎓Resultado 🎓🎓🎓</h3>
  
-### 📦 Creación de la librería **lpym**
+### 📦 Creación de la librería **lpym** 📦
 
 Creamos nuestra propia librería llamada **`lpym`**, con el objetivo de **automatizar los procesos de consultas** y facilitar la creación de una base de datos con los datos de ventas simuladas generados en el código. Los resultados se guardaron en **formato CSV**, ya que este tipo de archivo permite almacenar grandes cantidades de información de manera estructurada y compatible con diversas herramientas.  
 
@@ -252,7 +252,7 @@ Este archivo CSV fue utilizado como insumo para **Power BI**, lo que nos permiti
 
 De esta manera, logramos conectar la simulación de datos con una herramienta de análisis real, mostrando visualmente el comportamiento de las ventas.
 
-## 📂 Archivos del proyecto
+## 📂 Archivos del proyecto 📂
 
 - **lpym.py**
   
