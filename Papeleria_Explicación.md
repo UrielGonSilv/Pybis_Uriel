@@ -265,7 +265,7 @@ Contiene el código de la clase **`tools`**, la cual incluye las funciones neces
 ---
 
 - **Reporte de ventas papeleria.png**
-  
+
   Este archivo muestra el informe **"Histórico de Ventas - Julio"**, que incluye:  
   - 📈 Una gráfica con las fluctuaciones de ventas de las diferentes sucursales.  
   - 📊 La visualización **"Suma de Total por Sucursal"**, donde se observa que la sucursal con mayores ventas en julio fue **C.U.**, con **1.61 mil millones** de unidades monetarias.  
@@ -276,7 +276,7 @@ Contiene el código de la clase **`tools`**, la cual incluye las funciones neces
 ---
 
 - **Reporte de ventas papeleria 2.png**
-  
+
   Este archivo muestra la gráfica **"Suma de Total por Producto"**, presentada en forma de barras:  
   - El eje **X** representa los productos vendidos en la papelería.  
   - El eje **Y** indica la cantidad total vendida de cada producto.  
