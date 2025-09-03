@@ -1,4 +1,4 @@
-##  📝 Proyecto Papelería 📝 
+<h3 align="center">📝 Proyecto Papelería 📝</h3>
 
 Este proyecto simula un sistema de generación de ventas de una papelería con varias sucursales. 
 
@@ -239,7 +239,7 @@ Permite ejecutar cualquier sentencia SQL sobre la base Ventas.db.
 
 Devuelve el resultado en un DataFrame de Pandas, listo para análisis o sus consultas. 
 
-<h3 align="center">## 🎓🎓🎓Resultado 🎓🎓🎓</h3>
+<h3 align="center">🎓🎓🎓Resultado 🎓🎓🎓</h3>
  
 ### 📦 Creación de la librería **lpym**
 
