@@ -37,7 +37,7 @@ Este proyecto simula un sistema de generación de ventas de una papelería con v
 - SQLite3: Practicar consultas SQL con información simulada.
 - Random: Probar técnicas de análisis de datos con Pandas.
 
- ### 📂 Las listas que definimos para crear la información de las ventas en la papelería: 
+ ### 📂 Las listas que definimos para crear la información de las ventas en la papelería: 📂
 
 Para la generación de ventas ficticias se definieron tres listas principales:
 
@@ -71,7 +71,7 @@ Para la generación de ventas ficticias se definieron tres listas principales:
     'U', 'V', 'W', 'X', 'Y', 'Z' ]
   ```
   
-### 📦 Inicialización de listas vacías
+### 📦 Inicialización de listas vacías 📦
 
 Antes de generar las ventas de los productos, se crean listas vacías que funcionarán como contenedores.  
 Cada una almacenará un tipo de información específica que se completará dentro del bucle `for`.
@@ -98,7 +98,7 @@ totales = []
 # Guardará el nombre de la sucursal donde ocurrió la venta
 sucursales = []
 ```
-## 🎓 Creación de las variables con el primer "for" del codigo. 
+## 🎓 Creación de las variables con el primer "for" del codigo. 🎓 
 
 En esta parte del codigo se creo el primer "for" para poder crear las ventas aleatorias de las sucursales, definiendo cada variable y su contenido. 
 
@@ -124,6 +124,7 @@ Despues agregamos la información generada en cada una de las listas con la func
         sucursales.append(sucursal)
 ```
 Se crea un diccionario donde cada clave (productos, claves, cantidades, precios, totales, sucursales), la cual representa una categoría de datos y su valor es la lista completa de estos: 
+
 ```python
 dict_pre_ventas = {
         # clave: valores asociados
@@ -135,6 +136,7 @@ dict_pre_ventas = {
         "Total": totales,
         "Sucursal": sucursales
 ```
+
 La estructura resutante de este codigo es mas o menos la siguiente: 
 
 ```python
@@ -150,30 +152,36 @@ La estructura resutante de este codigo es mas o menos la siguiente:
 ```
 En el cual se estria agregando la información de cada variable con el "bucle for" que se genero.
 
-### 📝 Crear el DataFrame con la información generada. 
+### 📝 Creación del DataFrame con la información de ventas generada. 📝
 
-Este bloque de código se encarga de **guardar los datos generados en la base de datos**, así como de definir funciones para inicializar ventas, generar rangos de fechas y realizar consultas.
+En esta parte del código se encarga de **guardar los datos generados en la base de datos**, así como de definir funciones para inicializar ventas, generar rangos de fechas y realizar consultas de las ventas generadas.
 
 ---
 
 ```python
 df_2 = pd.DataFrame(dict_pre_ventas)
 print(f"Información generada al {fecha} con éxito")
-dict_pre_ventas → es el diccionario que contiene listas con los campos de cada venta (producto, cantidad, precio, etc.).
-
-pd.DataFrame() → convierte ese diccionario en un DataFrame de Pandas, que es la estructura de datos tabular.
-
-print(...) → confirma que la información fue creada para la fecha indicada.
 ```
-2️⃣ Conexión con la base de datos SQLite
+
+dict_pre_ventas → Es el diccionario que contiene listas de cada venta (producto, cantidad, precio, etc.).
+
+pd.DataFrame() → Convierte ese diccionario en un DataFrame o una tabla con la información de las ventas. 
+
+print(f"Información generada al {fecha} con éxito") → confirma que la información fue creada para la fecha indicada.
+
+## 🎓 Conexión con la base de datos SQLite 🎓
+
 ```python
 conexion = sql.connect("Ventas.db")
 ```
-Se conecta (o crea, si no existe) la base de datos Ventas.db en SQLite.
+Se conecta o se crea si no existe la información, la base de datos Ventas.db en SQLite.
 
-Esta base será el repositorio donde se guardarán todas las ventas ficticias.
+Esta base será el repositorio donde se guardarán todas las ventas.
 
-3️⃣ Guardado en la tabla Ventas_2025
+## 🫙Guardado en la tabla Ventas_2025 🫙
+
+En esta parte del codigo usaremos las funciones de "replace" y "append", para asi poder cargar la información de las ventas diarias de las papeleria y ademas irlas agregando a nuestra base de datos. 
+
 ```python
 
 if boolVentas == True:
@@ -181,38 +189,40 @@ if boolVentas == True:
 else:
     df_2.to_sql("Ventas_2025", conexion, if_exists="append")
 ```
-Caso 1 (replace) → si boolVentas == True, significa que es la primera carga. Se reemplaza la tabla completa.
 
-Caso 2 (append) → si boolVentas == False, significa que ya existe información previa. Los nuevos registros se agregan a la tabla existente.
+En el primer caso se usa (replace) al final y → si boolVentas == True → Significa que es la primera carga. Se reemplaza la tabla completa.
 
-📌 Esto permite simular ventas de un día o de muchos días sin borrar los datos anteriores.
+En el segundocaso usando (append) → si boolVentas == False → Significa que ya existe información previa así que los nuevos registros se agregan a la tabla existente.
 
-4️⃣ Cerrar la conexión
+Esto permite simular ventas de un día o de muchos días sin borrar los datos de ventas anteriores.
+
+## 🔐 Cerrar la conexión 🔐
+
 ```python
-
 conexion.close()
 print(f"Información subida a la bbdd al {fecha} con éxito")
 ```
 Siempre se debe cerrar la conexión a la base de datos para evitar errores o bloqueos.
 
-Se imprime un mensaje de confirmación indicando que la información se guardó con éxito.
+Se imprime un mensaje de confirmación indicando que la información se guardó con éxito en la base de datos. 
 
-🔧 Funciones auxiliares
+## 📄Ultimas funciones para poder usar la información del dataframe y crear consultas para su manipulación con SQL.📄
+
 Estas funciones permiten automatizar el proceso de generación de ventas y consultas.
 
-5️⃣ inicializador(fecha)
-```python
+- Inicializador(fecha)
 
+```python
 def inicializador(fecha):
     tools.generar_df_ventas(fecha, True)
 ```
 Genera ventas para una sola fecha específica.
 
-Llama a la función generar_df_ventas indicando que es la primera vez (True) → por lo tanto, se reemplaza la tabla.
+Llama a la función "generar_df_ventas" indicando que es la primera vez (True) → por lo tanto, se reemplaza la tabla.
 
-6️⃣ rango_fechas(fecha1, fecha2)
+- La siguiente linea de codigo "rango_fechas(fecha1, fecha2)" se crea para crear información de fechas con ventas entre dos fechas en especifico. 
+
 ```python
-
 def rango_fechas(fecha1, fecha2):
     import pandas as pd
     rango_fechas = pd.date_range(start=fecha1, end=fecha2, freq="d")
@@ -220,17 +230,17 @@ def rango_fechas(fecha1, fecha2):
     for fecha in rango_fechas:
         tools.generar_df_ventas(fecha, False)
 ```
-Utiliza pd.date_range() para generar todas las fechas entre fecha1 y fecha2.
+
+- Utilizamos "pd.date_range()" para generar todas las fechas entre fecha1 y fecha2.
 
 Por cada fecha en ese rango, se ejecuta la generación de ventas.
 
-El parámetro False indica que los registros se apilan (append) en la tabla sin reemplazar los anteriores.
+La función "append" indicando siempre con un  "False" los registros se apilan o se agregan en la tabla sin reemplazar los anteriores.
 
-📌 Ejemplo: generar ventas del 1 al 7 de enero 2025.
+- Utilización de "consulta(sentenciaSQL)"
 
-7️⃣ consulta(sentenciaSQL)
 ```python
-Copiar código
+
 def consulta(sentenciaSQL):
     import pandas as pd
     import sqlite3 as sql
@@ -241,18 +251,9 @@ def consulta(sentenciaSQL):
 
     return df_consulta
 ```
+
 Permite ejecutar cualquier sentencia SQL sobre la base Ventas.db.
 
-Devuelve el resultado en un DataFrame de Pandas, listo para análisis.
+Devuelve el resultado en un DataFrame de Pandas, listo para análisis o sus consultas. 
 
-📌 Ejemplo de uso:
 
-```python
-Copiar código
-df = consulta("""
-    SELECT Sucursal, SUM(Total) as Ventas_Totales
-    FROM Ventas_2025
-    GROUP BY Sucursal
-""")
-print(df)
-```
